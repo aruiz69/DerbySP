@@ -5,17 +5,12 @@
  */
 package samplestoredprocedures;
 
-import java.io.File;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -38,10 +33,14 @@ public class SampleStoredProcedures {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet res = null;
+        // default string 
         String urlConn = "jdbc:default:connection";
+//        String urlConn = "jdbc:derby://localhost:1527/Employee1";
+//        String user = "user1";
+//        String pwd = "user1";        
         try {
             //Class.forName("org.apache.derby.jdbc.ClientDriver");
-            conn = DriverManager.getConnection(urlConn);
+            conn = DriverManager.getConnection(urlConn); //,user,pwd);
 
             // prepare the query
             String sql = "SELECT LASTNAME FROM CUSTOMER WHERE ID = ?";

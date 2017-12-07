@@ -8,8 +8,8 @@ CREATE TABLE CUSTOMER (
  INSERT INTO CUSTOMER VALUES(default, 'Joe', 'Jones');
  INSERT INTO CUSTOMER VALUES(default, 'Sally', 'Smith');
 
-
-CALL sqlj.install_jar( 'C:/dev/Java 8/DerbySP/dist/DerbySP.jar,  ', 'USER1.SampleStoredProcedures',0);
+                                                                    -- En funcion del esquema utilizado 
+CALL sqlj.install_jar( 'C:/dev/Java 8/DerbySP/dist/DerbySP.jar', 'USER1.SampleStoredProcedures',0);
 
 --CALL sqlj.remove_jar( 'USER1.SampleStoredProcedures',0);
 

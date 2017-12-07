@@ -30,7 +30,7 @@ public class JavaApplication1 {
             // Create the CALL statement
             stmt = conn.prepareCall("CALL GETCUSTOMERLASTNAME( ?, ? )");
             // Bind the customer id to the first parameter
-            stmt.setLong(1, 2);
+            stmt.setLong(1, 5);
             // Register the second parameter as an OUT parameter
             stmt.registerOutParameter(2, Types.VARCHAR);
  
